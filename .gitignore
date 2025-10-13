@@ -1,0 +1,25 @@
+# ZTE Platform Template - .gitignore
+
+# Session state (temporary)
+.claude/session_state/
+
+# Project-specific (add your project files here)
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# Backups
+*.backup
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

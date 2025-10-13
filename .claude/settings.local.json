@@ -1,0 +1,74 @@
+{
+  "permissions": {
+    "allow": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/pre-tool-use/01-block-incomplete-code.sh"
+          },
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/pre-tool-use/02-require-tests.sh"
+          },
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/pre-tool-use/03-block-security-issues.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/post-tool-use/01-format-and-lint.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/stop/01-scan-incomplete-patterns.sh"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/subagent-stop/01-validate-review-quality.sh"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/pre-compact/01-save-session-state.sh"
+          },
+          {
+            "type": "command",
+            "command": "PROJECT_ROOT/.claude/hooks/pre-compact/02-update-claude-md.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
