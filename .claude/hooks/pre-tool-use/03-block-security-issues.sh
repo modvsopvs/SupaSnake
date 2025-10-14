@@ -58,12 +58,16 @@ if echo "$TEXT" | grep -Eq 'token[[:space:]]*=[[:space:]]*["\047]'; then
   exit 2
 fi
 
-# Check for SQL concatenation
-if echo "$TEXT" | grep -Eq 'SELECT.*\+|INSERT.*\+|UPDATE.*\+'; then
-  echo "❌ BLOCKED: SQL concatenation detected (injection risk)" >&2
+# Check for SQL string concatenation (injection risk)
+# IMPROVED: Only blocks + operator adjacent to quotes (string concat)
+# Allows: UPDATE users SET count = count + 1 (arithmetic - safe)
+# Blocks: SELECT * FROM users WHERE name = 'x' + input (string concat - dangerous)
+if echo "$TEXT" | grep -Eq '(SELECT|INSERT|UPDATE|DELETE).*([\+][[:space:]]*["\047]|["\047][[:space:]]*[\+])'; then
+  echo "❌ BLOCKED: SQL string concatenation detected (injection risk)" >&2
   echo "" >&2
   echo "Platform Requirement: Zero critical security issues" >&2
-  echo "Fix: Use parameterized queries" >&2
+  echo "Pattern: SQL with + operator adjacent to quotes indicates string concatenation" >&2
+  echo "Fix: Use parameterized queries with placeholders" >&2
   exit 2
 fi
 
