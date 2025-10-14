@@ -9,15 +9,15 @@
         "hooks": [
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/pre-tool-use/01-block-incomplete-code.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/01-block-incomplete-code.sh"
           },
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/pre-tool-use/02-require-tests.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/02-require-tests.sh"
           },
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/pre-tool-use/03-block-security-issues.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/03-block-security-issues.sh"
           }
         ]
       }
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/post-tool-use/01-format-and-lint.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/post-tool-use/01-format-and-lint.sh"
           }
         ]
       }
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/stop/01-scan-incomplete-patterns.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/stop/01-scan-incomplete-patterns.sh"
           }
         ]
       }
@@ -50,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/subagent-stop/01-validate-review-quality.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/subagent-stop/01-validate-review-quality.sh"
           }
         ]
       }
@@ -61,11 +61,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/pre-compact/01-save-session-state.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-compact/01-save-session-state.sh"
           },
           {
             "type": "command",
-            "command": "PROJECT_ROOT/.claude/hooks/pre-compact/02-update-claude-md.sh"
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-compact/02-update-claude-md.sh"
           }
         ]
       }
