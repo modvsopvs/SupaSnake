@@ -50,7 +50,31 @@ The setup script will:
 - Set file permissions
 - Update timestamps
 
-### 3. Customize for Your Project
+### 3. Configure Environment Variables
+
+```bash
+# Edit .env file (automatically created by setup.sh)
+vim .env
+
+# Fill in your service credentials:
+# - Supabase (database + auth)
+# - Stripe (payments)
+# - Vercel (deployment)
+# - Sentry (error tracking)
+# - etc.
+
+# See docs/ENVIRONMENT_SETUP.md for detailed setup guides
+```
+
+**Common Services:**
+- **Supabase:** Database + Auth + Storage ([setup guide](docs/ENVIRONMENT_SETUP.md#supabase))
+- **Stripe:** Payments ([setup guide](docs/ENVIRONMENT_SETUP.md#stripe))
+- **Vercel:** Deployment ([setup guide](docs/ENVIRONMENT_SETUP.md#vercel))
+- **Sentry:** Error tracking ([setup guide](docs/ENVIRONMENT_SETUP.md#sentry))
+
+**Complete guide:** `docs/ENVIRONMENT_SETUP.md` covers 20+ services with step-by-step instructions.
+
+### 4. Customize for Your Project
 
 ```bash
 # Update project information
@@ -64,7 +88,7 @@ mkdir tests
 # Start developing with ZTE platform support
 ```
 
-### 4. Start Claude Code
+### 5. Start Claude Code
 
 ```bash
 claude
@@ -188,6 +212,10 @@ python automation/orchestrator.py analyze --request "Add authentication"
 ---
 
 ## Documentation
+
+### Environment Setup
+- **docs/ENVIRONMENT_SETUP.md** - Complete guide for configuring services
+- **.env.example** - Template with all supported services
 
 ### Mission Control
 - **CLAUDE.md** - Always-loaded context (invariants + current work)
