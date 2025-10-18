@@ -476,6 +476,181 @@ What do you need?
 
 ---
 
+### Overview - Batch 2: Chapters 9-16
+
+**Source:** Jesse Schell, "The Art of Game Design" (3rd Edition, 2020)
+**Coverage:** Player psychology, motivation, mechanics, balance, puzzles, interface, engagement
+**Extraction Date:** 2025-10-18
+**Total:** 50 files, ~47,109 words of SupaSnake-specific knowledge
+
+**Key Deliverables:**
+- **Player Psychology**: Mental models, focus, empathy applied to Emma & Tyler
+- **Motivation Systems**: Intrinsic vs extrinsic motivation, Self-Determination Theory
+- **Six Core Mechanics**: Space, Objects, Actions, Rules, Skill, Chance (applied to Snake + collection)
+- **Balance Methodology**: Skill vs chance, economic balance, progression tuning
+- **Mobile Interface Design**: Touch controls, feedback loops, juiciness
+- **Interest Curves**: Session-based pacing for 5-10 minute mobile play
+
+**Edition Notes:** 3rd edition (2020) already includes modern mobile examples and F2P monetization. Still applied SupaSnake-specific context (React Native, Supabase, solo dev).
+
+### Quick Reference (quick_ref/) - Batch 2
+
+**Player Psychology & Motivation (Chapters 9-11):**
+- `concept_player_mental_models.md` (399 words) - How players construct game understanding
+- `concept_focus_attention.md` (391 words) - Managing player attention budget
+- `concept_empathy.md` (249 words) - Designer empathy for players
+- `concept_imagination.md` (285 words) - Activating player imagination
+- `concept_motivation_foundations.md` (291 words) - What drives players
+- `concept_intrinsic_motivation.md` (244 words) - Skill mastery, autonomy, purpose
+- `concept_extrinsic_motivation.md` (323 words) - Rewards, achievements, collection
+- `concept_player_needs.md` (311 words) - Fundamental psychological needs
+- `concept_autonomy_competence_relatedness.md` (301 words) - Self-Determination Theory
+- `lens_19_player.md` (258 words) - Player-centered design
+- `lens_20_pleasure.md` (304 words) - LeBlanc's 8 pleasures
+- `lens_21_flow.md` (315 words) - Flow state optimization
+- `lens_22_needs.md` (249 words) - Player needs lens
+- `lens_23_motivation.md` (267 words) - Motivation analysis
+- `lens_24_novelty.md` (290 words) - Novelty and surprise
+- `lens_25_judgment.md` (270 words) - Player judgment avoidance
+
+**Core Mechanics & Balance (Chapters 12-13):**
+- `mechanic_space.md` (303 words) - Discrete 2D grid for Snake
+- `mechanic_objects.md` (297 words) - Snake, DNA, variants as game objects
+- `mechanic_actions.md` (288 words) - Movement, collection, breeding actions
+- `mechanic_rules.md` (311 words) - Collision, scoring, breeding rules
+- `mechanic_skill.md` (292 words) - Snake mastery, player skill expression
+- `mechanic_chance.md` (285 words) - Variant RNG, collection gacha
+- `concept_game_balance.md` (299 words) - Balance types overview
+- `concept_balance_types.md` (388 words) - Fairness, challenge, meaningful choice
+
+**Interface & Engagement (Chapters 14-16):**
+- `concept_puzzle_design.md` (297 words) - Good puzzle principles
+- `concept_good_puzzles.md` (311 words) - What makes puzzles good
+- `concept_interface_design.md` (295 words) - Mobile touch interface
+- `concept_feedback_loops.md` (303 words) - Visual/audio/haptic feedback
+- `concept_interest_curves.md` (297 words) - Engagement pacing
+- `concept_pacing.md` (285 words) - Session pacing for mobile
+- `lens_54_accessibility.md` (249 words) - Accessibility considerations
+- `lens_55_visible_progress.md` (261 words) - Progress visualization
+
+**Total:** 30 quick_refs, ~8,728 words
+
+### How-To Guides (how_to/) - Batch 2
+
+**Player Psychology & Motivation:**
+- `apply_player_mental_models_to_supasnake.md` (1,847 words) - Designing for Emma & Tyler's mental models
+- `design_for_player_attention.md` (1,712 words) - Managing attention in mobile context
+- `balance_intrinsic_extrinsic_in_supasnake.md` (1,802 words) - Balancing skill mastery with collection rewards
+- `design_engagement_loops.md` (1,684 words) - Session-based engagement (5-10 min sessions)
+
+**Core Mechanics & Balance:**
+- `balance_supasnake_mechanics.md` (2,140 words) - Balancing Snake (skill) + collection (chance)
+- `tune_dna_economy.md` (1,753 words) - Economic balance, DNA costs, progression
+- `balance_skill_vs_chance.md` (1,889 words) - Skill floor/ceiling for casual vs hardcore
+
+**Interface & Engagement:**
+- `design_mobile_touch_interface.md` (1,931 words) - Touch controls, feedback, juiciness
+- `create_engagement_curves.md` (1,847 words) - Interest curves for mobile sessions
+- `design_puzzles_for_supasnake.md` (1,502 words) - Optional puzzle content (breeding challenges)
+
+**Total:** 11 how_tos, ~18,107 words
+
+### Reference Summaries (reference/) - Batch 2
+
+**Chapter Summaries (batch2_chapters/):**
+- `chapter_09_player_summary.md` (804 words) - Player understanding
+- `chapter_10_mind_summary.md` (892 words) - Player mental models
+- `chapter_11_motivation_summary.md` (793 words) - Motivation systems
+- `chapter_12_mechanics_summary.md` (1,247 words) - Six core mechanics
+- `chapter_13_balance_summary.md` (1,104 words) - Game balance
+- `chapter_14_puzzles_summary.md` (801 words) - Puzzle design
+- `chapter_15_interface_summary.md` (847 words) - Interface design
+- `chapter_16_interest_summary.md` (738 words) - Interest curves
+
+**Total:** 8 reference summaries, ~7,226 words
+
+---
+
+## Common Game Design Queries - Batch 2
+
+### Player Psychology
+
+**"How do players build mental models of my game?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_player_mental_models.md (399 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_player_mental_models_to_supasnake.md (1,847 words)
+
+**"How do I manage player attention?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_focus_attention.md (391 words)
+- **If applying:** @knowledge_base/game_design/how_to/design_for_player_attention.md (1,712 words)
+
+**"What motivates players intrinsically vs extrinsically?"**
+- **Quick refs:**
+  - @knowledge_base/game_design/quick_ref/concept_intrinsic_motivation.md (244 words)
+  - @knowledge_base/game_design/quick_ref/concept_extrinsic_motivation.md (323 words)
+- **If balancing:** @knowledge_base/game_design/how_to/balance_intrinsic_extrinsic_in_supasnake.md (1,802 words)
+
+**"What is Self-Determination Theory?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_autonomy_competence_relatedness.md (301 words)
+
+### Game Mechanics
+
+**"What are the six core mechanics?"**
+- **Quick refs:**
+  - Space: @knowledge_base/game_design/quick_ref/mechanic_space.md (303 words)
+  - Objects: @knowledge_base/game_design/quick_ref/mechanic_objects.md (297 words)
+  - Actions: @knowledge_base/game_design/quick_ref/mechanic_actions.md (288 words)
+  - Rules: @knowledge_base/game_design/quick_ref/mechanic_rules.md (311 words)
+  - Skill: @knowledge_base/game_design/quick_ref/mechanic_skill.md (292 words)
+  - Chance: @knowledge_base/game_design/quick_ref/mechanic_chance.md (285 words)
+- **If applying:** @knowledge_base/game_design/how_to/balance_supasnake_mechanics.md (2,140 words)
+
+**"How do I balance Snake mechanics with collection?"**
+- **Answer:** @knowledge_base/game_design/how_to/balance_supasnake_mechanics.md (2,140 words)
+- **Quick context:** Covers skill (Snake) vs chance (collection), progression curves, floor/ceiling balance
+
+**"How do I balance skill vs chance?"**
+- **Answer:** @knowledge_base/game_design/how_to/balance_skill_vs_chance.md (1,889 words)
+- **Quick context:** Skill floor for casual players (Emma), skill ceiling for hardcore (Tyler)
+
+### Balance & Economy
+
+**"How do I tune DNA economy?"**
+- **Answer:** @knowledge_base/game_design/how_to/tune_dna_economy.md (1,753 words)
+- **Quick ref:** @knowledge_base/game/quick_ref/economic_balance.md (265 words)
+
+**"What types of game balance exist?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_balance_types.md (388 words)
+- **Context:** Fairness, challenge, meaningful choice, skill vs chance
+
+### Mobile Interface & Engagement
+
+**"How do I design mobile touch interface?"**
+- **Answer:** @knowledge_base/game_design/how_to/design_mobile_touch_interface.md (1,931 words)
+- **Quick ref:** @knowledge_base/game_design/quick_ref/concept_interface_design.md (295 words)
+
+**"How do I create feedback loops?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_feedback_loops.md (303 words)
+- **Context:** Visual, audio, haptic feedback for mobile
+
+**"How do I pace mobile game sessions?"**
+- **Answer:** @knowledge_base/game_design/how_to/create_engagement_curves.md (1,847 words)
+- **Quick refs:**
+  - Interest curves: @knowledge_base/game_design/quick_ref/concept_interest_curves.md (297 words)
+  - Pacing: @knowledge_base/game_design/quick_ref/concept_pacing.md (285 words)
+
+**"How do I design engagement loops for mobile?"**
+- **Answer:** @knowledge_base/game_design/how_to/design_engagement_loops.md (1,684 words)
+- **Context:** 5-10 minute sessions, energy gating, retention hooks
+
+### Puzzles (Optional Content)
+
+**"Should I add puzzles to SupaSnake?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_puzzle_design.md (297 words)
+- **If implementing:** @knowledge_base/game_design/how_to/design_puzzles_for_supasnake.md (1,502 words)
+- **Context:** Breeding challenges as optional puzzle content
+
+---
+
 ## Query Efficiency Comparison
 
 ### Before (Monolithic Docs)
@@ -706,12 +881,14 @@ knowledge_base/game/
 
 ---
 
-**Version:** 2.3 - Complete Game Coverage + Game Design Foundations (Schell Batch 1)
+**Version:** 2.4 - Complete Game Coverage + Game Design Foundations (Schell Batches 1-2)
 **Coverage:**
 - Platform: 7 quick_refs + 5 how_tos + 5 reference docs
 - Game Implementation: 21 quick_refs + 11 how_tos covering ALL 26 systems
-- Game Design: 29 quick_refs + 12 how_tos + 8 chapter summaries (Schell Ch 1-8)
+- Game Design Batch 1: 29 quick_refs + 12 how_tos + 8 chapter summaries (Schell Ch 1-8, 1st Edition)
+- Game Design Batch 2: 30 quick_refs + 11 how_tos + 8 chapter summaries (Schell Ch 9-16, 3rd Edition)
+- **Total Game Design**: 59 quick_refs + 23 how_tos + 16 chapter summaries = 98 files, ~81,775 words
 **Philosophy:** Database-like query optimization for documentation
-**Result:** Top 1% context management + foundational game design knowledge
+**Result:** Top 1% context management + comprehensive game design knowledge (psychology, mechanics, balance, interface)
 
 *Query efficiency: Load 300 words instead of 34,000 words per game design query. Context savings: 99%+ reduction.*
