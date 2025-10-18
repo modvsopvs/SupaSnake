@@ -672,6 +672,25 @@ What do you need?
 
 ---
 
+### Overview - Batch 4: Chapters 25-32
+
+**Source:** Jesse Schell, "The Art of Game Design" (3rd Edition, 2020)
+**Coverage:** Communities, teams, documentation, playtesting, technology, business
+**Extraction Date:** 2025-10-18
+**Total:** ~38 files, ~16,000 words adapted for solo mobile dev
+
+**Key Deliverables:**
+- **Solo Dev Workflows**: Agile processes for 1-person team, sustainable pace
+- **Lightweight Documentation**: Living specs, minimal overhead (5-15 pages total)
+- **Mobile F2P Playtesting**: Retention-focused testing (D1/D7/D30 metrics)
+- **Technology Decisions**: React Native + Supabase + Expo stack validated
+- **Ethical Monetization**: F2P without predation, energy = pacing not paywall
+- **App Store Optimization**: ASO strategy, screenshots, keywords, icon design
+
+**Critical Adaptations:** All team/client concepts heavily adapted for solo dev and self-publishing reality.
+
+---
+
 ## Query Efficiency Comparison
 
 ### Before (Monolithic Docs)
@@ -902,14 +921,15 @@ knowledge_base/game/
 
 ---
 
-**Version:** 2.5 - Complete Game Coverage + Game Design (Schell Batches 1-3)
+**Version:** 2.6 - Complete Game Coverage + Game Design (Schell Batches 1-4)
 **Coverage:**
 - Platform: 7 quick_refs + 5 how_tos + 5 reference docs
 - Game Implementation: 21 quick_refs + 11 how_tos covering ALL 26 systems
-- Game Design Batch 1: 29 quick_refs + 12 how_tos + 8 summaries (Ch 1-8, Foundations)
-- Game Design Batch 2: 30 quick_refs + 11 how_tos + 8 summaries (Ch 9-16, Psychology/Mechanics/Balance)
-- Game Design Batch 3: ~35 quick_refs + 8 how_tos + 8 summaries (Ch 17-24, Story/Worlds/Aesthetics/Multiplayer)
-- **Total Game Design**: ~94 quick_refs + 31 how_tos + 24 summaries = ~149 files, ~96,000 words
+- Game Design Batch 1: 29 quick_refs + 12 how_tos + 8 summaries (Ch 1-8)
+- Game Design Batch 2: 30 quick_refs + 11 how_tos + 8 summaries (Ch 9-16)
+- Game Design Batch 3: ~35 quick_refs + 8 how_tos + 8 summaries (Ch 17-24)
+- Game Design Batch 4: ~23 quick_refs + 5 how_tos + 10 summaries (Ch 25-32, Solo Dev Adapted)
+- **Total Game Design**: ~117 quick_refs + 36 how_tos + 34 summaries = ~187 files, ~112,000 words
 **Philosophy:** Database-like query optimization for documentation
 **Result:** Top 1% context management + comprehensive game design knowledge
 
