@@ -651,6 +651,27 @@ What do you need?
 
 ---
 
+### Overview - Batch 3: Chapters 17-24
+
+**Source:** Jesse Schell, "The Art of Game Design" (3rd Edition, 2020)
+**Coverage:** Story, worlds, characters, spaces, aesthetics, multiplayer
+**Extraction Date:** 2025-10-18
+**Total:** ~50 files, ~14,000 words of SupaSnake-specific knowledge
+
+**Key Deliverables:**
+- **Minimal Story Design**: Dynasty lore, variant flavor text, emergent collection narratives
+- **Dynasties as Worlds**: CYBER/PRIMAL/COSMIC as coherent thematic realms
+- **Variants as Characters**: Silent character design, personality through visuals
+- **Labs as Spaces**: Architectural UI design (Collection/Breeding/Evolution Labs)
+- **Visual/Audio Identity**: Dynasty-specific aesthetics, mobile-first design
+- **Future Multiplayer**: Async-first social features (leaderboards, trading, guilds)
+
+**Quick Refs Created:** Story fundamentals, indirect control, world building, character design, space design, presence, art direction, multiplayer design + 13 lenses
+
+**How-Tos Created:** Apply story to SupaSnake, design dynasty lore, design dynasty worlds, design variants as characters, design lab spaces, create presence in mobile, design SupaSnake aesthetics, plan multiplayer features
+
+---
+
 ## Query Efficiency Comparison
 
 ### Before (Monolithic Docs)
@@ -881,14 +902,15 @@ knowledge_base/game/
 
 ---
 
-**Version:** 2.4 - Complete Game Coverage + Game Design Foundations (Schell Batches 1-2)
+**Version:** 2.5 - Complete Game Coverage + Game Design (Schell Batches 1-3)
 **Coverage:**
 - Platform: 7 quick_refs + 5 how_tos + 5 reference docs
 - Game Implementation: 21 quick_refs + 11 how_tos covering ALL 26 systems
-- Game Design Batch 1: 29 quick_refs + 12 how_tos + 8 chapter summaries (Schell Ch 1-8, 1st Edition)
-- Game Design Batch 2: 30 quick_refs + 11 how_tos + 8 chapter summaries (Schell Ch 9-16, 3rd Edition)
-- **Total Game Design**: 59 quick_refs + 23 how_tos + 16 chapter summaries = 98 files, ~81,775 words
+- Game Design Batch 1: 29 quick_refs + 12 how_tos + 8 summaries (Ch 1-8, Foundations)
+- Game Design Batch 2: 30 quick_refs + 11 how_tos + 8 summaries (Ch 9-16, Psychology/Mechanics/Balance)
+- Game Design Batch 3: ~35 quick_refs + 8 how_tos + 8 summaries (Ch 17-24, Story/Worlds/Aesthetics/Multiplayer)
+- **Total Game Design**: ~94 quick_refs + 31 how_tos + 24 summaries = ~149 files, ~96,000 words
 **Philosophy:** Database-like query optimization for documentation
-**Result:** Top 1% context management + comprehensive game design knowledge (psychology, mechanics, balance, interface)
+**Result:** Top 1% context management + comprehensive game design knowledge
 
 *Query efficiency: Load 300 words instead of 34,000 words per game design query. Context savings: 99%+ reduction.*
