@@ -95,6 +95,51 @@ What do you need?
 
 ---
 
+## Game Documentation
+
+### Quick Reference (quick_ref/)
+
+**Dynasty System:**
+- `dynasties.md` (200 words) - 3 starter dynasties, stats, bonuses, variants
+- `mvp_scope.md` (250 words) - v0.1/v0.5/v1.0 feature breakdown
+- `breeding_rules.md` (200 words) - Breeding formula, generation, costs
+
+**Collection & Economy:**
+- `collection_targets.md` (150 words) - Panini book psychology, targets
+- `economic_balance.md` (200 words) - DNA income/costs, time estimates
+
+**Production:**
+- `art_pipeline.md` (250 words) - Option A (Simple 3D + Midjourney)
+- `constraints.md` (300 words) - Technical/business/design constraints
+
+**Total:** 7 files, ~1,550 words
+
+### How-To Guides (how_to/)
+
+**Content Production:**
+- `add_new_dynasty.md` (1,000 words) - 7-day monthly expansion process
+- `create_variant_art.md` (900 words) - Midjourney art generation guide
+
+**Game Design:**
+- `balance_progression.md` (1,200 words) - Tuning progression curves
+- `design_breeding.md` (900 words) - Breeding mechanics design
+
+**Total:** 4 files, ~4,000 words
+
+### Reference Docs (reference/)
+
+**Comprehensive Specs:**
+- `MAP_to_full_docs.md` - Links to all 27 comprehensive game docs
+  - Dynasty System Specification v1.0 (~15,000 words)
+  - Dynasty Sprint Briefing (~4,800 words)
+  - MVP Scope (~5,000 words)
+  - Constraint Lattice (~8,000 words)
+  - Plus 23 more comprehensive documents
+
+**Total:** 1 MAP file + links to ~165,000 words of comprehensive specs
+
+---
+
 ## Common Queries
 
 ### "Should I /clear or continue?"
@@ -147,6 +192,54 @@ What do you need?
 
 ---
 
+## Common Game Queries
+
+### "What dynasties exist in MVP?"
+
+**Answer:** @knowledge_base/game/quick_ref/dynasties.md (200 words)
+
+**If need complete spec:** @knowledge_base/game/reference/MAP_to_full_docs.md → Dynasty System Specification v1.0 (15,000 words)
+
+### "What's the breeding formula?"
+
+**Answer:** @knowledge_base/game/quick_ref/breeding_rules.md (200 words)
+
+**If implementing:** @knowledge_base/game/how_to/design_breeding.md (900 words)
+
+**If need complete spec:** @knowledge_base/game/reference/MAP_to_full_docs.md → Dynasty System Spec Section 8
+
+### "How do I add a new dynasty?"
+
+**Answer:** @knowledge_base/game/how_to/add_new_dynasty.md (1,000 words)
+
+**If need context:** @knowledge_base/game/reference/MAP_to_full_docs.md → Monthly Expansion Playbook
+
+### "How do I create variant art?"
+
+**Answer:** @knowledge_base/game/how_to/create_variant_art.md (900 words)
+
+**If need pipeline overview:** @knowledge_base/game/quick_ref/art_pipeline.md (250 words)
+
+### "What's the MVP scope?"
+
+**Answer:** @knowledge_base/game/quick_ref/mvp_scope.md (250 words)
+
+**If need complete scope:** @knowledge_base/game/reference/MAP_to_full_docs.md → MVP Scope (5,000 words)
+
+### "What are the DNA costs?"
+
+**Answer:** @knowledge_base/game/quick_ref/economic_balance.md (200 words)
+
+**If balancing progression:** @knowledge_base/game/how_to/balance_progression.md (1,200 words)
+
+### "What are project constraints?"
+
+**Answer:** @knowledge_base/game/quick_ref/constraints.md (300 words)
+
+**If need complete analysis:** @knowledge_base/game/reference/MAP_to_full_docs.md → Constraint Lattice (8,000 words)
+
+---
+
 ## Query Efficiency Comparison
 
 ### Before (Monolithic Docs)
@@ -171,15 +264,26 @@ What do you need?
 
 ## Token Savings
 
-**Typical session queries:**
+**Typical platform session queries:**
 - Decision matrix: 200 words (was 2,717 words) - save 2,517 words
 - When to /clear: 100 words (was 2,717 words) - save 2,617 words
 - Hook types: 250 words (was 7,215 words) - save 6,965 words
 - Token estimates: 300 words (was 3,100 words) - save 2,800 words
 
-**Total typical session:** Load 850 words instead of 15,749 words
+**Total platform session:** Load 850 words instead of 15,749 words
+**Savings:** 14,899 words (~20k tokens)
 
-**Savings:** 14,899 words (~20k tokens) = ~10% of context budget
+**Typical game session queries:**
+- Dynasties: 200 words (was 15,000 words from full spec) - save 14,800 words
+- Breeding rules: 200 words (was 15,000 words) - save 14,800 words
+- MVP scope: 250 words (was 5,000 words) - save 4,750 words
+- Economic balance: 200 words (was 15,000 words) - save 14,800 words
+
+**Total game session:** Load 850 words instead of 50,000 words
+**Savings:** 49,150 words (~65k tokens)
+
+**Combined typical session:** Platform (850) + Game (850) = 1,700 words instead of 65,749 words
+**Total Savings:** 64,049 words (~85k tokens) = ~42% of context budget
 
 ---
 
@@ -213,22 +317,27 @@ knowledge_base/platform/
     └── subagent_guide_full.md          # 5,000+ words
 ```
 
-### Game Structure (Future-Ready)
+### Game Structure (Production-Ready)
 
 ```
 knowledge_base/game/
-├── api/
-│   ├── quick_ref/                      # API quick lookups
-│   ├── how_to/                         # API usage guides
-│   └── reference/                      # Complete API docs
-├── mechanics/
-│   ├── quick_ref/                      # Mechanics quick lookups
-│   ├── how_to/                         # Implementation guides
-│   └── reference/                      # Complete mechanics docs
-└── architecture/
-    ├── quick_ref/                      # Architecture quick lookups
-    ├── how_to/                         # Integration guides
-    └── reference/                      # Complete architecture docs
+├── quick_ref/                          # First stop for game queries
+│   ├── dynasties.md                    # 200 words - 3 dynasties, stats, variants
+│   ├── mvp_scope.md                    # 250 words - v0.1/v0.5/v1.0 summary
+│   ├── breeding_rules.md               # 200 words - Breeding formula, inheritance
+│   ├── collection_targets.md           # 150 words - Panini book, targets
+│   ├── economic_balance.md             # 200 words - DNA income/costs
+│   ├── art_pipeline.md                 # 250 words - Midjourney + 3D pipeline
+│   └── constraints.md                  # 300 words - Technical/business/design
+│
+├── how_to/                             # Step-by-step game guides
+│   ├── add_new_dynasty.md              # 1,000 words - Monthly expansion process
+│   ├── balance_progression.md          # 1,200 words - Tuning progression curves
+│   ├── design_breeding.md              # 900 words - Breeding mechanics design
+│   └── create_variant_art.md           # 900 words - Midjourney art generation
+│
+└── reference/                          # Comprehensive game specs
+    └── MAP_to_full_docs.md             # Links to all 27 comprehensive docs
 ```
 
 ---
