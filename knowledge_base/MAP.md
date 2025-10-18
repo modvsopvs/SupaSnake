@@ -331,6 +331,151 @@ What do you need?
 
 ---
 
+## Game Design Documentation (Schell Extraction)
+
+### Overview - Batch 1: Chapters 1-8
+
+**Source:** Jesse Schell, "The Art of Game Design" (1st Edition, 2008)
+**Coverage:** Foundational game design principles applied to SupaSnake
+**Extraction Date:** 2025-10-18
+**Total:** 48 files, ~34,666 words of SupaSnake-specific knowledge
+
+**Key Deliverables:**
+- **Theme defined**: "Collection joy through mastery achievement"
+- **Target personas**: Emma (32, casual mobile) and Tyler (14, hardcore collector)
+- **2008 → 2025**: All concepts modernized for mobile F2P context
+
+### Quick Reference (quick_ref/)
+
+**Designer Foundations (Chapters 1-2):**
+- `principles/principle_confidence.md` (348 words) - "I am a game designer" mantra
+- `principles/principle_listening.md` (400 words) - Most important skill
+- `principles/principle_five_listenings.md` (440 words) - Team, Audience, Game, Client, Self
+- `principles/principle_major_gift.md` (483 words) - Love of work > innate talent
+- `concepts/concept_experience_vs_game.md` (501 words) - Game is artifact, experience is mental state
+- `concepts/concept_essential_experience.md` (509 words) - Core experience definition
+- `concepts/concept_introspection.md` (545 words) - Defeating Heisenberg, memory techniques
+
+**Game Theory (Chapters 3-4):**
+- `concept_game_definition.md` (250 words) - Problem-solving with playful attitude
+- `concept_fun.md` (283 words) - Pleasure with surprises
+- `concept_play.md` (305 words) - Manipulation that indulges curiosity
+- `concept_endogenous_value.md` (311 words) - Internal game meaning
+- `concept_elemental_tetrad.md` (299 words) - Mechanics, Story, Aesthetics, Technology
+- `principle_holographic_design.md` (326 words) - See skin AND skeleton
+
+**Theme & Ideas (Chapters 5-6):**
+- `concept_theme.md` (297 words) - Unifying idea behind game
+- `lens_09_unification.md` (280 words) - Theme reinforcement
+- `lens_10_resonance.md` (309 words) - Theme depth
+- `concept_problem_statement.md` (318 words) - What problem does game solve?
+- `lens_11_infinite_inspiration.md` (356 words) - Sources of ideas
+- `lens_12_problem_statement.md` (333 words) - Lens application
+- `concept_subconscious_mind.md` (379 words) - Working with subconscious
+- `principle_brainstorming_essentials.md` (390 words) - Effective ideation
+
+**Player Psychology (Chapters 7-8):**
+- `concepts/concept_eight_filters.md` (258 words) - Eight design filters
+- `concepts/concept_rule_of_loop.md` (266 words) - Iteration principle
+- `concepts/concept_demographics.md` (305 words) - Age, gender, lifestyle
+- `concepts/concept_psychographics.md` (375 words) - LeBlanc's 8 pleasures, Bartle types
+- `concepts/concept_prototyping.md` (442 words) - Fast iteration
+- `concepts/concept_empathy_projection.md` (496 words) - Becoming your player
+- `concepts/concept_gender_play_differences.md` (438 words) - Male/female play patterns
+
+**Total:** 29 quick_refs, ~10,717 words
+
+### How-To Guides (how_to/)
+
+**Applying to SupaSnake:**
+- `apply_to_supasnake/apply_five_listenings_to_supasnake.md` (1,980 words) - Team/Audience/Game/Client/Self listening
+- `apply_to_supasnake/apply_experience_design_to_collection_lab.md` (2,035 words) - Experience-first design
+- `apply_problem_solving_lens_to_supasnake.md` (1,427 words) - Games as problems
+- `apply_elemental_tetrad_to_supasnake.md` (1,872 words) - Harmonizing four elements
+- `apply_theme_to_supasnake.md` (1,898 words) - Theme reinforcement across all elements
+- `state_design_problem.md` (1,772 words) - Problem statement workshop
+- `work_with_subconscious.md` (2,226 words) - Subconscious techniques
+- `apply_to_supasnake/apply_eight_filters_to_supasnake.md` (2,214 words) - Eight design filters
+- `apply_to_supasnake/understand_supasnake_target_audience.md` (2,218 words) - Emma & Tyler personas
+- `apply_to_supasnake/apply_player_psychology_to_supasnake.md` (2,432 words) - Pleasures & motivations
+- `apply_to_supasnake/maximize_iteration_loops.md` (2,783 words) - Rapid prototyping
+- `apply_to_supasnake/design_for_mobile_f2p_players.md` (2,501 words) - Mobile F2P design
+
+**Total:** 12 how_tos, ~25,358 words
+
+### Reference Summaries (reference/)
+
+**Chapter Summaries (batch1_chapters/):**
+- `chapter_01_designer_summary.md` (795 words) - Designer foundations
+- `chapter_02_experience_summary.md` (1,193 words) - Experience design
+- `chapter_03_experience_rises_from_game_summary.md` - Game definitions
+- `chapter_04_game_consists_of_elements_summary.md` - Elemental tetrad
+- `chapter_05_theme_summary.md` - Theme unification
+- `chapter_06_idea_summary.md` - Idea generation
+- `chapter_07_iteration_summary.md` - Prototyping & iteration
+- `chapter_08_player_summary.md` - Player understanding
+
+**Total:** 8 reference summaries, ~8,591 words
+
+---
+
+## Common Game Design Queries
+
+### Designer Mindset
+
+**"How do I build confidence as a designer?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/principles/principle_confidence.md (348 words)
+
+**"What's the most important designer skill?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/principles/principle_listening.md (400 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_to_supasnake/apply_five_listenings_to_supasnake.md (1,980 words)
+
+**"Do I need natural talent to design games?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/principles/principle_major_gift.md (483 words)
+
+### Core Design Principles
+
+**"What's SupaSnake's theme?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_theme.md (297 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_theme_to_supasnake.md (1,898 words)
+
+**"What's the elemental tetrad?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_elemental_tetrad.md (299 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_elemental_tetrad_to_supasnake.md (1,872 words)
+
+**"How do I define my design problem?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_problem_statement.md (318 words)
+- **If applying:** @knowledge_base/game_design/how_to/state_design_problem.md (1,772 words)
+
+### Player Understanding
+
+**"Who is SupaSnake's target audience?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concepts/concept_demographics.md (305 words)
+- **If need personas:** @knowledge_base/game_design/how_to/apply_to_supasnake/understand_supasnake_target_audience.md (2,218 words)
+
+**"What motivates mobile players?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concepts/concept_psychographics.md (375 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_to_supasnake/apply_player_psychology_to_supasnake.md (2,432 words)
+
+**"How do I design for mobile F2P players?"**
+- **Answer:** @knowledge_base/game_design/how_to/apply_to_supasnake/design_for_mobile_f2p_players.md (2,501 words)
+
+### Design Process
+
+**"How do I work with my subconscious?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concept_subconscious_mind.md (379 words)
+- **If applying:** @knowledge_base/game_design/how_to/work_with_subconscious.md (2,226 words)
+
+**"How do I maximize iteration speed?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concepts/concept_prototyping.md (442 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_to_supasnake/maximize_iteration_loops.md (2,783 words)
+
+**"What are the eight design filters?"**
+- **Answer:** @knowledge_base/game_design/quick_ref/concepts/concept_eight_filters.md (258 words)
+- **If applying:** @knowledge_base/game_design/how_to/apply_to_supasnake/apply_eight_filters_to_supasnake.md (2,214 words)
+
+---
+
 ## Query Efficiency Comparison
 
 ### Before (Monolithic Docs)
@@ -561,9 +706,12 @@ knowledge_base/game/
 
 ---
 
-**Version:** 2.2 - Complete Game Coverage
-**Coverage:** 21 quick_refs + 11 how_tos covering ALL 26 game systems
+**Version:** 2.3 - Complete Game Coverage + Game Design Foundations (Schell Batch 1)
+**Coverage:**
+- Platform: 7 quick_refs + 5 how_tos + 5 reference docs
+- Game Implementation: 21 quick_refs + 11 how_tos covering ALL 26 systems
+- Game Design: 29 quick_refs + 12 how_tos + 8 chapter summaries (Schell Ch 1-8)
 **Philosophy:** Database-like query optimization for documentation
-**Result:** Top 1% context management system with 100% game documentation coverage
+**Result:** Top 1% context management + foundational game design knowledge
 
-*Load 2,600 words instead of 115,000 words. Query efficiency: 98% reduction. Context budget saved: ~85%.*
+*Query efficiency: Load 300 words instead of 34,000 words per game design query. Context savings: 99%+ reduction.*
