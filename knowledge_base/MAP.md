@@ -99,32 +99,71 @@ What do you need?
 
 ### Quick Reference (quick_ref/)
 
-**Dynasty System:**
-- `dynasties.md` (200 words) - 3 starter dynasties, stats, bonuses, variants
-- `mvp_scope.md` (250 words) - v0.1/v0.5/v1.0 feature breakdown
-- `breeding_rules.md` (200 words) - Breeding formula, generation, costs
+**Backend & Infrastructure:**
+- `backend_supabase.md` (299 words) - PostgreSQL, real-time, storage, RLS, database schema
+- `auth_system.md` (399 words) - Authentication flow, JWT, sessions, user permissions
 
-**Collection & Economy:**
-- `collection_targets.md` (150 words) - Panini book psychology, targets
-- `economic_balance.md` (200 words) - DNA income/costs, time estimates
+**Core Gameplay:**
+- `core_snake_game.md` (379 words) - Snake mechanics, grid system, collision, DNA farming
+- `energy_system.md` (392 words) - Stamina gating, regeneration (1/20min), session pacing
+- `resource_generation.md` (500 words) - DNA collection formulas, score-to-DNA conversion
+- `classic_mode.md` (588 words) - Classic Snake gameplay, victory conditions, difficulty
+
+**Lab Systems:**
+- `collection_lab.md` (344 words) - Panini book UI, collection targets, set bonuses
+- `breeding_lab.md` (344 words) - Breeding mechanics, same-dynasty breeding (v0.1)
+- `evolution_lab.md` (415 words) - Evolution system (v0.5+), rarity transformation
+- `lab_ui.md` (442 words) - Lab navigation, tab structure, shared components
+
+**UI & Navigation:**
+- `ui_framework.md` (437 words) - React Native structure, navigation, key components
+
+**Dynasty System:**
+- `dynasties.md` (270 words) - 3 starter dynasties (CYBER, PRIMAL, COSMIC), 30 variants
+- `breeding_rules.md` (252 words) - Breeding formula, generation, costs, inheritance
+
+**Economy & Progression:**
+- `collection_targets.md` (203 words) - Panini book psychology, completion targets
+- `economic_balance.md` (265 words) - DNA income/costs, time estimates, progression
+
+**Meta & Overview:**
+- `glossary.md` (503 words) - Key terminology quick lookup (DNA, Dynasty, Variant, etc.)
+- `system_graph.md` (435 words) - System dependencies, build order, tiers
+- `player_journey.md` (674 words) - New player flow, progression loops, retention hooks
+- `mvp_scope.md` (297 words) - v0.1/v0.5/v1.0 feature breakdown
 
 **Production:**
-- `art_pipeline.md` (250 words) - Option A (Simple 3D + Midjourney)
-- `constraints.md` (300 words) - Technical/business/design constraints
+- `art_pipeline.md` (334 words) - Midjourney 2D + Simple 3D pipeline
+- `constraints.md` (414 words) - Technical/business/design constraints
 
-**Total:** 7 files, ~1,550 words
+**Total:** 21 files, ~8,186 words
 
 ### How-To Guides (how_to/)
 
+**Backend Implementation:**
+- `setup_supabase_backend.md` (1,908 words) - Supabase setup, database tables, RLS, storage
+- `implement_auth.md` (1,650 words) - Authentication implementation, JWT, sessions
+
+**Gameplay Implementation:**
+- `implement_energy_system.md` (1,101 words) - Energy state, regeneration, depletion, UI
+- `tune_classic_mode.md` (1,179 words) - Balance tuning, grid size, speed, DNA rewards
+
+**Lab Implementation:**
+- `design_lab_ui.md` (1,746 words) - Lab screen design, Panini book style, navigation
+- `implement_evolution.md` (1,530 words) - Evolution system (v0.5+), rarity transformation
+
+**UI Implementation:**
+- `create_react_native_screens.md` (1,530 words) - React Native screen creation, navigation
+
 **Content Production:**
-- `add_new_dynasty.md` (1,000 words) - 7-day monthly expansion process
-- `create_variant_art.md` (900 words) - Midjourney art generation guide
+- `add_new_dynasty.md` (1,248 words) - Monthly dynasty expansion process (7-day sprint)
+- `create_variant_art.md` (1,543 words) - Midjourney art generation workflow
 
 **Game Design:**
-- `balance_progression.md` (1,200 words) - Tuning progression curves
-- `design_breeding.md` (900 words) - Breeding mechanics design
+- `balance_progression.md` (1,529 words) - Tuning progression curves, retention
+- `design_breeding.md` (1,447 words) - Breeding mechanics design, formulas
 
-**Total:** 4 files, ~4,000 words
+**Total:** 11 files, ~16,411 words
 
 ### Reference Docs (reference/)
 
@@ -194,49 +233,101 @@ What do you need?
 
 ## Common Game Queries
 
-### "What dynasties exist in MVP?"
+### Backend & Infrastructure
 
-**Answer:** @knowledge_base/game/quick_ref/dynasties.md (200 words)
+**"How do I set up Supabase?"**
+- **Answer:** @knowledge_base/game/quick_ref/backend_supabase.md (299 words)
+- **If implementing:** @knowledge_base/game/how_to/setup_supabase_backend.md (1,908 words)
 
-**If need complete spec:** @knowledge_base/game/reference/MAP_to_full_docs.md → Dynasty System Specification v1.0 (15,000 words)
+**"How does authentication work?"**
+- **Answer:** @knowledge_base/game/quick_ref/auth_system.md (399 words)
+- **If implementing:** @knowledge_base/game/how_to/implement_auth.md (1,650 words)
 
-### "What's the breeding formula?"
+### Core Gameplay
 
-**Answer:** @knowledge_base/game/quick_ref/breeding_rules.md (200 words)
+**"How does the Snake game work?"**
+- **Answer:** @knowledge_base/game/quick_ref/core_snake_game.md (379 words)
 
-**If implementing:** @knowledge_base/game/how_to/design_breeding.md (900 words)
+**"How does the Energy system work?"**
+- **Answer:** @knowledge_base/game/quick_ref/energy_system.md (392 words)
+- **If implementing:** @knowledge_base/game/how_to/implement_energy_system.md (1,101 words)
 
-**If need complete spec:** @knowledge_base/game/reference/MAP_to_full_docs.md → Dynasty System Spec Section 8
+**"How do players earn DNA?"**
+- **Answer:** @knowledge_base/game/quick_ref/resource_generation.md (500 words)
 
-### "How do I add a new dynasty?"
+**"How do I tune Classic Mode difficulty?"**
+- **Answer:** @knowledge_base/game/quick_ref/classic_mode.md (588 words)
+- **If tuning balance:** @knowledge_base/game/how_to/tune_classic_mode.md (1,179 words)
 
-**Answer:** @knowledge_base/game/how_to/add_new_dynasty.md (1,000 words)
+### Lab Systems
 
-**If need context:** @knowledge_base/game/reference/MAP_to_full_docs.md → Monthly Expansion Playbook
+**"How does the Collection Lab work?"**
+- **Answer:** @knowledge_base/game/quick_ref/collection_lab.md (344 words)
 
-### "How do I create variant art?"
+**"How does breeding work?"**
+- **Answer:** @knowledge_base/game/quick_ref/breeding_lab.md (344 words)
+- **If implementing:** @knowledge_base/game/how_to/design_breeding.md (1,447 words)
 
-**Answer:** @knowledge_base/game/how_to/create_variant_art.md (900 words)
+**"How does Evolution work?" (v0.5+)**
+- **Answer:** @knowledge_base/game/quick_ref/evolution_lab.md (415 words)
+- **If implementing:** @knowledge_base/game/how_to/implement_evolution.md (1,530 words)
 
-**If need pipeline overview:** @knowledge_base/game/quick_ref/art_pipeline.md (250 words)
+**"How do I design Lab UI screens?"**
+- **Answer:** @knowledge_base/game/quick_ref/lab_ui.md (442 words)
+- **If implementing:** @knowledge_base/game/how_to/design_lab_ui.md (1,746 words)
 
-### "What's the MVP scope?"
+### UI & Navigation
 
-**Answer:** @knowledge_base/game/quick_ref/mvp_scope.md (250 words)
+**"How is the UI structured?"**
+- **Answer:** @knowledge_base/game/quick_ref/ui_framework.md (437 words)
+- **If creating screens:** @knowledge_base/game/how_to/create_react_native_screens.md (1,530 words)
 
-**If need complete scope:** @knowledge_base/game/reference/MAP_to_full_docs.md → MVP Scope (5,000 words)
+### Dynasty System
 
-### "What are the DNA costs?"
+**"What dynasties exist in MVP?"**
+- **Answer:** @knowledge_base/game/quick_ref/dynasties.md (270 words)
+- **If adding new:** @knowledge_base/game/how_to/add_new_dynasty.md (1,248 words)
+- **If need complete spec:** @knowledge_base/game/reference/MAP_to_full_docs.md → Dynasty System Specification v1.0
 
-**Answer:** @knowledge_base/game/quick_ref/economic_balance.md (200 words)
+**"What's the breeding formula?"**
+- **Answer:** @knowledge_base/game/quick_ref/breeding_rules.md (252 words)
+- **If implementing:** @knowledge_base/game/how_to/design_breeding.md (1,447 words)
 
-**If balancing progression:** @knowledge_base/game/how_to/balance_progression.md (1,200 words)
+### Economy & Progression
 
-### "What are project constraints?"
+**"What are the DNA costs?"**
+- **Answer:** @knowledge_base/game/quick_ref/economic_balance.md (265 words)
+- **If balancing:** @knowledge_base/game/how_to/balance_progression.md (1,529 words)
 
-**Answer:** @knowledge_base/game/quick_ref/constraints.md (300 words)
+**"What are collection targets?"**
+- **Answer:** @knowledge_base/game/quick_ref/collection_targets.md (203 words)
 
-**If need complete analysis:** @knowledge_base/game/reference/MAP_to_full_docs.md → Constraint Lattice (8,000 words)
+### Meta & Overview
+
+**"What does this term mean?"**
+- **Answer:** @knowledge_base/game/quick_ref/glossary.md (503 words)
+- **If need complete:** @docs/game/03_GLOSSARY.md (13,800+ words)
+
+**"What's the system build order?"**
+- **Answer:** @knowledge_base/game/quick_ref/system_graph.md (435 words)
+- **If need complete:** @docs/game/01_SYSTEM_GRAPH.md (7,200+ words)
+
+**"What's the player journey?"**
+- **Answer:** @knowledge_base/game/quick_ref/player_journey.md (674 words)
+
+**"What's the MVP scope?"**
+- **Answer:** @knowledge_base/game/quick_ref/mvp_scope.md (297 words)
+- **If need complete:** @knowledge_base/game/reference/MAP_to_full_docs.md → MVP Scope
+
+### Production
+
+**"How do I create variant art?"**
+- **Answer:** @knowledge_base/game/quick_ref/art_pipeline.md (334 words)
+- **If creating art:** @knowledge_base/game/how_to/create_variant_art.md (1,543 words)
+
+**"What are project constraints?"**
+- **Answer:** @knowledge_base/game/quick_ref/constraints.md (414 words)
+- **If need complete:** @knowledge_base/game/reference/MAP_to_full_docs.md → Constraint Lattice
 
 ---
 
@@ -273,17 +364,20 @@ What do you need?
 **Total platform session:** Load 850 words instead of 15,749 words
 **Savings:** 14,899 words (~20k tokens)
 
-**Typical game session queries:**
-- Dynasties: 200 words (was 15,000 words from full spec) - save 14,800 words
-- Breeding rules: 200 words (was 15,000 words) - save 14,800 words
-- MVP scope: 250 words (was 5,000 words) - save 4,750 words
-- Economic balance: 200 words (was 15,000 words) - save 14,800 words
+**Typical game session queries (complete coverage):**
+- Backend setup: 299 words (was 22,000 words from full spec) - save 21,701 words
+- Energy system: 392 words (was 12,500 words) - save 12,108 words
+- Core gameplay: 379 words (was 18,000 words) - save 17,621 words
+- Lab systems: 344 words (was 11,000 words) - save 10,656 words
+- UI framework: 437 words (was 23,000 words) - save 22,563 words
+- Dynasties: 270 words (was 15,000 words) - save 14,730 words
+- Glossary: 503 words (was 13,800 words) - save 13,297 words
 
-**Total game session:** Load 850 words instead of 50,000 words
-**Savings:** 49,150 words (~65k tokens)
+**Total game session:** Load ~2,600 words instead of ~115,000 words
+**Savings:** ~112,400 words (~150k tokens)
 
-**Combined typical session:** Platform (850) + Game (850) = 1,700 words instead of 65,749 words
-**Total Savings:** 64,049 words (~85k tokens) = ~42% of context budget
+**Combined typical session:** Platform (850) + Game (2,600) = 3,450 words instead of 130,749 words
+**Total Savings:** 127,299 words (~170k tokens) = ~85% context budget saved
 
 ---
 
@@ -317,27 +411,48 @@ knowledge_base/platform/
     └── subagent_guide_full.md          # 5,000+ words
 ```
 
-### Game Structure (Production-Ready)
+### Game Structure (Complete Coverage - v2.2)
 
 ```
 knowledge_base/game/
-├── quick_ref/                          # First stop for game queries
-│   ├── dynasties.md                    # 200 words - 3 dynasties, stats, variants
-│   ├── mvp_scope.md                    # 250 words - v0.1/v0.5/v1.0 summary
-│   ├── breeding_rules.md               # 200 words - Breeding formula, inheritance
-│   ├── collection_targets.md           # 150 words - Panini book, targets
-│   ├── economic_balance.md             # 200 words - DNA income/costs
-│   ├── art_pipeline.md                 # 250 words - Midjourney + 3D pipeline
-│   └── constraints.md                  # 300 words - Technical/business/design
+├── quick_ref/                                # 21 files, ~8,186 words total
+│   ├── backend_supabase.md                   # 299w - Database, real-time, RLS
+│   ├── auth_system.md                        # 399w - JWT, sessions, permissions
+│   ├── core_snake_game.md                    # 379w - Snake mechanics, collision
+│   ├── energy_system.md                      # 392w - Stamina, regeneration
+│   ├── resource_generation.md                # 500w - DNA earning formulas
+│   ├── classic_mode.md                       # 588w - Victory, difficulty
+│   ├── collection_lab.md                     # 344w - Panini book UI
+│   ├── breeding_lab.md                       # 344w - Breeding mechanics
+│   ├── evolution_lab.md                      # 415w - Evolution (v0.5+)
+│   ├── lab_ui.md                             # 442w - Lab navigation
+│   ├── ui_framework.md                       # 437w - React Native structure
+│   ├── dynasties.md                          # 270w - 3 dynasties, 30 variants
+│   ├── breeding_rules.md                     # 252w - Breeding formula
+│   ├── collection_targets.md                 # 203w - Panini psychology
+│   ├── economic_balance.md                   # 265w - DNA costs, progression
+│   ├── glossary.md                           # 503w - Key terminology
+│   ├── system_graph.md                       # 435w - Dependencies, build order
+│   ├── player_journey.md                     # 674w - Player flow, retention
+│   ├── mvp_scope.md                          # 297w - v0.1/v0.5/v1.0
+│   ├── art_pipeline.md                       # 334w - Midjourney + 3D
+│   └── constraints.md                        # 414w - Technical/business/design
 │
-├── how_to/                             # Step-by-step game guides
-│   ├── add_new_dynasty.md              # 1,000 words - Monthly expansion process
-│   ├── balance_progression.md          # 1,200 words - Tuning progression curves
-│   ├── design_breeding.md              # 900 words - Breeding mechanics design
-│   └── create_variant_art.md           # 900 words - Midjourney art generation
+├── how_to/                                   # 11 files, ~16,411 words total
+│   ├── setup_supabase_backend.md             # 1,908w - Database, RLS, storage
+│   ├── implement_auth.md                     # 1,650w - Auth flow, JWT
+│   ├── implement_energy_system.md            # 1,101w - Energy state, regen
+│   ├── tune_classic_mode.md                  # 1,179w - Balance tuning
+│   ├── design_lab_ui.md                      # 1,746w - Lab screens, Panini style
+│   ├── implement_evolution.md                # 1,530w - Evolution (v0.5+)
+│   ├── create_react_native_screens.md        # 1,530w - Screen creation
+│   ├── add_new_dynasty.md                    # 1,248w - Monthly expansion
+│   ├── create_variant_art.md                 # 1,543w - Midjourney workflow
+│   ├── balance_progression.md                # 1,529w - Progression curves
+│   └── design_breeding.md                    # 1,447w - Breeding mechanics
 │
-└── reference/                          # Comprehensive game specs
-    └── MAP_to_full_docs.md             # Links to all 27 comprehensive docs
+└── reference/                                # Comprehensive specs
+    └── MAP_to_full_docs.md                   # Links to 27 comprehensive docs
 ```
 
 ---
@@ -446,8 +561,9 @@ knowledge_base/game/
 
 ---
 
-**Version:** 2.1
+**Version:** 2.2 - Complete Game Coverage
+**Coverage:** 21 quick_refs + 11 how_tos covering ALL 26 game systems
 **Philosophy:** Database-like query optimization for documentation
-**Result:** Top 1% context management system
+**Result:** Top 1% context management system with 100% game documentation coverage
 
-*Know exactly where to find what you need, when you need it.*
+*Load 2,600 words instead of 115,000 words. Query efficiency: 98% reduction. Context budget saved: ~85%.*
