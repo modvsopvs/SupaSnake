@@ -43,6 +43,8 @@
     "/Users/josefbell/SupaSnake/knowledge_base/platform/how_to/create_custom_hook.md",
     "/Users/josefbell/SupaSnake/knowledge_base/platform/quick_ref/hook_types.md"
   ],
-  "blocked": [],
+  "blocked": [
+    "/Users/josefbell/SupaSnake/knowledge_base/game/quick_ref/platform_strategy.md"
+  ],
   "status": "loaded"
 }
