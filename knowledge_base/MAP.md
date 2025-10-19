@@ -62,12 +62,14 @@ What do you need?
 
 **Hooks:**
 - `hook_types.md` (250 words) - All hook types and when to use them
+- `hook_exit_codes.md` (350 words) - Correct exit codes (exit 0/2, NOT exit 1)
 - `hook_testing.md` (300 words) - How to test hooks quickly
+- `architectural_gates.md` (350 words) - AAA architectural quality gates (server authority)
 
 **Sub-Agents:**
 - `subagent_types.md` (350 words) - All sub-agent types and when to use them
 
-**Total:** 7 files, ~1,650 words
+**Total:** 9 files, ~2,350 words
 
 ### How-To Guides (how_to/)
 
@@ -79,8 +81,10 @@ What do you need?
 **Implementation:**
 - `create_custom_hook.md` (800 words) - Create, test, deploy custom hook
 - `use_subagents.md` (1,000 words) - Spawn and use sub-agents effectively
+- `use_context_loading_system.md` (2,800 words) - Context loading with enforcement
+- `maintain_server_authority.md` (2,800 words) - Server-authoritative architecture (AAA 2026)
 
-**Total:** 5 files, ~4,700 words
+**Total:** 7 files, ~10,300 words
 
 ### Reference Docs (reference/)
 
@@ -203,6 +207,12 @@ What do you need?
 
 **If need all patterns:** @knowledge_base/platform/reference/hooks_guide_full.md (7,000+ words)
 
+### "What are the correct hook exit codes?"
+
+**Answer:** @knowledge_base/platform/quick_ref/hook_exit_codes.md (350 words)
+
+**Context:** Critical information about correct exit codes for PreToolUse hooks (exit 0 = allow, exit 2 = block). Documents common mistake of using exit 1 (doesn't block).
+
 ### "How to recover after /clear?"
 
 **Answer:** @knowledge_base/platform/quick_ref/active_loading.md (150 words)
@@ -228,6 +238,24 @@ What do you need?
 ### "How to update CLAUDE.md?"
 
 **Answer:** @knowledge_base/platform/how_to/update_claude_md.md (1,000 words)
+
+### "How does the context loading system work?"
+
+**Answer:** @knowledge_base/platform/how_to/use_context_loading_system.md (2,800 words)
+
+**Quick context:** Deterministic enforcement of Rule #1 (must have right context) and Rule #2 (no context bloat) through hooks. Create context plan → Load files → Hooks validate → Audit compliance.
+
+### "How do I maintain server authority in my game?"
+
+**Answer:** @knowledge_base/platform/how_to/maintain_server_authority.md (2,800 words)
+
+**Quick context:** Server-authoritative architecture (AAA 2026 standard). Client displays, server decides. 5 hooks enforce: no localStorage for game state, no client DB access, no client secrets, no hard-coded constants. Prevents cheating, enables multiplayer, ensures data integrity.
+
+### "What are the architectural quality gates?"
+
+**Answer:** @knowledge_base/platform/quick_ref/architectural_gates.md (350 words)
+
+**Quick context:** 5 hooks enforce server authority: Hook 07 (localStorage), Hook 08 (client DB), Hook 09 (secrets), Hook 10 (constants), Hook 04 (audit). Deterministic prevention of common architectural violations.
 
 ---
 
@@ -942,7 +970,7 @@ knowledge_base/game/
 
 **Version:** 3.0 - COMPLETE: Game Coverage + Full Schell Extraction (All 5 Batches)
 **Coverage:**
-- Platform: 7 quick_refs + 5 how_tos + 5 reference docs
+- Platform: 9 quick_refs + 7 how_tos + 5 reference docs
 - Game Implementation: 21 quick_refs + 11 how_tos covering ALL 26 systems
 - Game Design Batch 1: 29 quick_refs + 12 how_tos + 8 summaries (Ch 1-8, Foundations)
 - Game Design Batch 2: 30 quick_refs + 11 how_tos + 8 summaries (Ch 9-16, Psychology/Mechanics)

@@ -4,7 +4,7 @@
 
 **Platform Architecture:**
 - ZTE Platform = Hooks (quality gates) + Sub-agents (specialized analysis) + Orchestration (multi-instance)
-- PreToolUse hooks enforce deterministically (exit 1 blocks operations)
+- PreToolUse hooks enforce deterministically (exit 2 blocks operations)
 - Sub-agents get 200k fresh context each
 
 **Non-Negotiables:**
@@ -33,26 +33,26 @@
 **Status:** [Design / Implementation / Review / Complete]
 **Blocker:** None
 
-**Last Auto-Update:** 2025-10-14 19:26
+**Last Auto-Update:** 2025-10-19 21:41
 **Branch:** main
-**Last Commit:** 61be37b Update PLATFORM_STATUS.md with initialization date
+**Last Commit:** 67122d2 Add Game Design Knowledge Base - Schell Batch 5 (Chapters 33-36, FINAL, 3rd Edition)
 
 **Recent Changes:**
 ```
- M .claude/hooks/pre-tool-use/03-block-security-issues.sh
  M .claude/settings.local.json
  M CLAUDE.md
-?? docs/game/
-?? docs/platform/
+ M knowledge_base/MAP.md
+ D knowledge_base/game/how_to/add_new_dynasty.md
+ D knowledge_base/game/how_to/balance_progression.md
 ```
 
 **Recent Files:**
 ```
-.claude/settings.local.json
-.env.example
-PLATFORM_STATUS.md
-README.md
-docs/ENVIRONMENT_SETUP.md
+knowledge_base/MAP.md
+knowledge_base/game_design/BATCH5_MANIFEST.md
+knowledge_base/game_design/how_to/apply_story_to_supasnake.md
+knowledge_base/game_design/how_to/avoid_dark_patterns_mobile_f2p.md
+knowledge_base/game_design/how_to/build_mobile_game_community.md
 ```
 
 **Note:** Update manually after milestones with specific feature info.
@@ -105,6 +105,162 @@ Total > 150k OR Task >30k → Delegate to sub-agent
 - Continuing same feature (context is relevant)
 - Low token usage (<80k)
 - Mid-complex reasoning (valuable conversation context)
+
+---
+
+## 🔒 Context Loading Protocol (CRITICAL - Rule #1)
+
+**Rule #1:** Never work without the right context (existential requirement)
+**Rule #2:** Never bloat context with irrelevant content (protects Rule #1)
+
+### Before ANY Substantive Work:
+
+**Step 1: Analyze Context Needs**
+- What does this query require?
+- What's the current state? (check CLAUDE.md, roadmaps, plans)
+- What knowledge base files are needed?
+- What tier? (quick_ref / how_to / reference)
+
+**Step 2: Create Context Plan**
+Write context plan to `state/context_plan_<timestamp>.json`:
+```json
+{
+  "session_id": "<timestamp>",
+  "timestamp": "<ISO-8601>",
+  "query": "<user query>",
+  "analysis": "<what you determined>",
+  "required_context": [
+    {
+      "file": "knowledge_base/.../file.md",
+      "reason": "why needed",
+      "tier": "quick_ref",
+      "priority": "critical"
+    }
+  ],
+  "optional_context": [],
+  "loaded": [],
+  "blocked": [],
+  "status": "pending"
+}
+```
+
+**Step 3: State Your Plan to User**
+```
+"I need to load the following context:
+- breeding_overview.md (breeding mechanics)
+- f2p_economy.md (DNA costs)
+
+Loading now..."
+```
+
+**Step 4: Load Files**
+- Read each required file
+- PreToolUse hooks will validate each load against plan
+- Hooks block off-plan loads (Rule #2 enforcement)
+
+**Step 5: Verify Before Implementing**
+- All critical files must be loaded
+- PreToolUse hooks enforce this before Write/Edit
+- Status updates to "loaded" automatically
+
+**NEVER skip this protocol. Hooks enforce deterministically.**
+
+### Context Plan Status Flow
+
+```
+pending → loading → loaded → complete
+            ↓
+         blocked (if inappropriate loads attempted)
+```
+
+### Enforcement Mechanism
+
+**PreToolUse Hook 05 (Validate Reads):**
+- Validates every knowledge_base Read against context plan
+- Blocks reads not in plan (Rule #2: prevents bloat)
+- Updates loaded[] array automatically
+
+**PreToolUse Hook 06 (Require Context):**
+- Blocks Write/Edit without loaded context (Rule #1)
+- Checks all critical files loaded
+- Allows implementation only after context verified
+
+**Stop Hook 03 (Audit):**
+- Shows context compliance report
+- Lists loaded files
+- Reports blocked loads (Rule #2 enforcement)
+
+---
+
+## 🎮 Server Authority (AAA 2026 Standard)
+
+**Core Principle:** Server is single source of truth for all game state.
+
+**What This Means:**
+- Client displays UI, collects input
+- Server processes ALL game logic
+- Client receives results, updates display
+- No game state in localStorage (only UI preferences)
+
+**Why It Matters:**
+- Prevents cheating (can't modify localStorage for infinite DNA)
+- Enables multiplayer (single source of truth)
+- Prevents data loss (localStorage cleared = preferences lost, not progress)
+- Enables server validation (all mutations validated)
+
+### The 4 Principles
+
+**1. Client Displays, Server Decides**
+- Never calculate game state client-side
+- All game logic in API routes
+- Client shows results only
+
+**2. API Routes for All Mutations**
+- Every state change goes through API
+- Client never directly accesses database
+- API validates, processes, persists
+
+**3. Secrets Stay Server-Side**
+- No SERVICE_ROLE_KEY in client code
+- No private keys in client code
+- Sensitive operations in API routes only
+
+**4. Config-Driven Balance**
+- Game constants in `src/shared/config/game.ts`
+- No hard-coded DNA costs, spawn rates, etc.
+- Can tune without code changes
+
+### localStorage Policy
+
+**✅ Allowed (UI State):**
+- Theme, volume, language
+- Input preferences
+- Tutorial completion flags
+- Analytics consent
+
+**❌ Never Allowed (Game State):**
+- DNA, score, level
+- Inventory, collection
+- Unlocks, achievements
+- Any progress data
+
+**Rule:** If losing it means losing progress → Server. If losing it means re-selecting preferences → localStorage.
+
+### Architectural Quality Gates (Enforcement)
+
+**5 Hooks enforce server authority:**
+
+1. **Hook 07 - Server Authority:** Blocks localStorage for game state (dna, score, inventory, etc.)
+2. **Hook 08 - Client DB Access:** Blocks direct database queries in client code (components/, hooks/, ui/)
+3. **Hook 09 - Client Secrets:** Blocks SERVICE_ROLE_KEY and private keys in client code
+4. **Hook 10 - Config Constants:** Blocks hard-coded game balance values (DNA_COST = 50, etc.)
+5. **Hook 04 - Architecture Audit:** Comprehensive scan for all violations (runs when Claude stops)
+
+**These hooks make server authority DETERMINISTIC.**
+
+Attempting to violate server authority → Hook blocks → Claude must fix → Production code is guaranteed clean.
+
+**See:** @knowledge_base/platform/how_to/maintain_server_authority.md for complete guide
 
 ---
 

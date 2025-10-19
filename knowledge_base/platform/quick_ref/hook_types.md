@@ -39,12 +39,15 @@ Hooks enforce quality at different lifecycle points. Choose the right type for y
 
 **PreToolUse (CRITICAL):**
 - `exit 0` = Allow operation
-- `exit 1` = BLOCK operation (file never written)
+- `exit 2` = BLOCK operation (file never written)
+- ⚠️ **NOT exit 1** - exit 1 is informational only!
 
 **All Other Hooks:**
 - Exit codes are informational only
 - Cannot block operations
 - Output shown to Claude
+
+**See:** @knowledge_base/platform/quick_ref/hook_exit_codes.md for common mistakes
 
 ## Key Principle
 

@@ -1,71 +1,49 @@
 # MVP Scope - Quick Reference
 
-## v0.1: Core Gameplay + Dynasty Foundation (Weeks 1-10)
+**Source:** vision/vision_statement_aaa.md, design/core_loop_aaa.md (implied from AAA docs)
 
-**Core Snake Gameplay**:
-- Classic Snake mechanics (move, grow, die on collision)
-- Simple 3D snake model with dynasty color/pattern shader
-- DNA collection (1 DNA per food pellet)
-- 60fps target on mid-range mobile devices
+## Core Concept
+6-month MVP development delivering core competitive Snake gameplay, basic breeding system (3 dynasties), and guild foundations to validate product-market fit before full AAA production investment.
 
-**Dynasty System**:
-- 3 starter dynasties (CYBER, PRIMAL, COSMIC)
-- 30 total variants (10 per dynasty)
-- Unlock dynasties with DNA (2k-3k each)
-- Same-dynasty breeding only
-- Set bonus: Complete dynasty → +10% DNA income
+## Key Points
+- **MVP Core Features (Month 0-6):**
+  - **Gameplay:** Last Snake Standing mode only (simplest win condition)
+  - **Breeding:** 3 dynasties (Venom, Inferno, Frost), 10 variants each (30 total)
+  - **Collection:** Basic variant tracking, no rarity visual progression
+  - **Competitive:** Bronze-Gold ranked ladder (MMR 0-1500), manual matchmaking
+  - **Social:** 20-member guilds, basic chat, no guild wars
+  - **Monetization:** Direct DNA purchase ($0.99-$9.99 packs), no battle pass
+  - **Platform:** iOS only, English language, NA region (closed beta 1,000 players)
+- **Validation Metrics:**
+  - D1 retention: 30%+ (baseline, target 40% for v1.0)
+  - D7 retention: 15%+ (baseline, target 20% for v1.0)
+  - Average session: 15+ minutes (validate 3-minute match cadence)
+  - Payer conversion: 3%+ (baseline, target 5% for v1.0)
+- **MVP Cuts (Defer to v1.0):**
+  - ❌ All 4 win conditions (only Last Snake Standing)
+  - ❌ Pity system (basic egg gacha)
+  - ❌ Guild wars (guilds exist but no competitive events)
+  - ❌ Spectator mode (no esports infrastructure)
+  - ❌ Battle pass (manual content updates)
+  - ❌ 10 dynasties (only 3 launch dynasties)
+  - ❌ Generational breeding (basic egg opening only)
 
-**Collection Lab (Panini Book)**:
-- Dynasty tabs with variant grids
-- Full-screen Midjourney art cards (2048×2048px)
-- Unlock flow, breeding UI, lineage tree
-- Visual progress tracking (X/10 per dynasty)
+## AAA Standards
+- **60fps Gameplay:** Non-negotiable even in MVP (competitive advantage)
+- **Fair Matchmaking:** MMR-based even if limited tiers (no random lobbies)
+- **Production Quality:** Supercell art bar maintained (fewer variants, same quality)
+- **No Pay-to-Win:** Enforced from day one (only cosmetic variants)
 
-**Features NOT in v0.1**: Abilities, PvP, leaderboards, social features
-
-## v0.5: Abilities + Evolution (Weeks 11-15)
-
-**Abilities System**:
-- 3 abilities per dynasty (dynasty-themed)
-- CYBER: Dash, Shield, Magnet
-- Cooldown-based activation
-- Synergy with dynasty stat bonuses
-
-**Evolution System**:
-- Stage 1 → Stage 2 → Stage 3 → Stage 4
-- Visual progression (size, glow, particle effects)
-- 3D model scales up with stage
-- Unlock via XP (play time)
-
-**Features NOT in v0.5**: Multiplayer, guilds, trading
-
-## v1.0: PvP + Leaderboards (Weeks 16-20)
-
-**PvP Arena**:
-- 1v1 Snake battles
-- Dynasty abilities active
-- ELO-based matchmaking
-- Ranked seasons with rewards
-
-**Leaderboards**:
-- Global DNA collected
-- Highest stage reached
-- Most dynasties completed
-- PvP ranking
-
-**Social Features**:
-- Friend list
-- Breeding requests
-- Gift DNA
-
-## Launch Sequence
-
-1. **v0.1 MVP Launch**: Core gameplay + 3 dynasties (Week 10)
-2. **Monthly Dynasty Releases**: +1 dynasty/month (starting Month 2)
-3. **v0.5 Abilities Update**: Major feature release (Week 15)
-4. **v1.0 PvP Launch**: Competitive mode (Week 20)
+## Implementation Priority
+- **MVP (6 months):** Validate core loop, breeding hook, guild retention
+- **v1.0 (12 months):** Full 10 dynasties, guild wars, battle pass, spectator mode
+- **v2.0+ (18+ months):** Esports, transmedia, seasonal narratives
 
 ## See Also
+- @vision/vision_statement_aaa.md (long-term vision beyond MVP)
+- @design/core_loop_aaa.md (v1.0 complete gameplay)
+- @knowledge_base/game_archive_v1_solo_dev/ (original solo-dev MVP for comparison)
 
-**Complete Scope**: @docs/game/02_MVP_SCOPE.md
-**Dynasty Details**: @knowledge_base/game/quick_ref/dynasties.md
+---
+
+*Word Count: 297 words*

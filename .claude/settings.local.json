@@ -1,9 +1,21 @@
 {
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(cat:*)",
+      "Read(//Users/**)"
+    ]
   },
   "hooks": {
     "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/05-validate-context-reads.sh"
+          }
+        ]
+      },
       {
         "matcher": "Write|Edit|MultiEdit",
         "hooks": [
@@ -18,6 +30,26 @@
           {
             "type": "command",
             "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/03-block-security-issues.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/06-require-context-for-implementation.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/07-enforce-server-authority.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/08-block-client-db-access.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/09-block-client-secrets.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/pre-tool-use/10-enforce-config-constants.sh"
           }
         ]
       }
@@ -40,6 +72,14 @@
           {
             "type": "command",
             "command": "/Users/josefbell/SupaSnake/.claude/hooks/stop/01-scan-incomplete-patterns.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/stop/03-audit-context-compliance.sh"
+          },
+          {
+            "type": "command",
+            "command": "/Users/josefbell/SupaSnake/.claude/hooks/stop/04-architecture-audit.sh"
           }
         ]
       }
